@@ -1,0 +1,73 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+  <!-- experience section -->
+
+  <section class="experience_section layout_padding-top layout_padding2-bottom">
+    <div class="container">
+      {% for i in object_list %}
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-box">
+            <img src="{{i.image.url}}" alt="">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                {{i.title}}
+              </h2>
+            </div>
+            <p>
+             {{i.sub_title}}
+            </p>
+            <div class="btn-box">
+              <a href="" class="btn-1">
+                Read More
+              </a>
+              <a href="" class="btn-2">
+                Hire
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- end experience section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container">
+      {% for b in About %}
+      <div class="row">
+        <div class="col-md-10 col-lg-9 mx-auto">
+          <div class="img-box">
+            <img src="{{b.image.url}}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="detail-box">
+        <h2>
+         {{b.title}}
+        </h2>
+        <p>
+         {{b.sub_title}}
+        </p>
+        <a href="">
+          Read More
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
+  <!-- end about section -->
+
+  <!-- info section -->
